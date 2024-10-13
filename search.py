@@ -1,6 +1,5 @@
 import pygame
 
-
 def dfs(grid_cells, start, goal, cols, explored_cells, screen, draw_maze, clock):
     start_cell = grid_cells[start[0] + start[1] * cols]
     goal_cell = grid_cells[goal[0] + goal[1] * cols]

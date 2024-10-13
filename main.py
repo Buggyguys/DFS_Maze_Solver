@@ -20,7 +20,6 @@ def setup_display(cols, rows):
     pygame.display.set_caption("Maze Visualization")
     return screen
 
-
 # arrow direction
 def draw_arrow(screen, x, y, direction):
     center_x = x * TILE_SIZE + TILE_SIZE // 2
@@ -39,7 +38,6 @@ def draw_arrow(screen, x, y, direction):
     elif direction == "right":
         pygame.draw.polygon(screen, BLACK, [(center_x + size, center_y), (center_x - size, center_y - size // 2),
                                             (center_x - size, center_y + size // 2)])
-
 
 # draw the maze
 def draw_maze(screen, grid_cells, cols, rows, explored=None, path=None):
@@ -80,7 +78,6 @@ def draw_maze(screen, grid_cells, cols, rows, explored=None, path=None):
             pygame.draw.line(screen, BLACK, (x + TILE_SIZE, y + TILE_SIZE), (x, y + TILE_SIZE), 2)
         if cell.walls['left']:
             pygame.draw.line(screen, BLACK, (x, y + TILE_SIZE), (x, y), 2)
-
 
 # visualisation of the maze/DFS
 def main():
